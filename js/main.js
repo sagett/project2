@@ -14,6 +14,8 @@ $.ajax({
 });
 */
 
+var imageArray = [];
+
 $.ajax({ 
     url: 'https://api.imgur.com/3/gallery.json',
     headers: {
@@ -21,17 +23,20 @@ $.ajax({
     },
     type: 'GET',
     success: function(data) { 
-    	console.log(data.data.length);
-    	console.log(data.data[0].link); 
-    var Imgur = function() {
-	    this.items = [];
-	    this.page=0;
-	    };
-    
-   Imgur.Page = function() {
-	   var url
-	   
-	   
+    	console.log(data);
+    	console.log(data.data[0].link);
+    	
+    	for (var i=0; i< data.data.length; i++){
+	    	var currentImg = data.data[i];
+	    	var URL = currentImg.link;
+	    	imageArray.push(URL); 
+	    	console.log(URL);
+	    	
+	    	
+	    	
+	    	
+    	}
+    	   
    }
    
    
