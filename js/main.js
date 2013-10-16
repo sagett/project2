@@ -16,8 +16,10 @@ $.ajax({
 
 var imageArray = [];
 
+//https://api.imgur.com/3/gallery.json 
+
 $.ajax({ 
-    url: 'https://api.imgur.com/3/gallery.json',
+    url: 'https://api.imgur.com/3/gallery/user/time/:page.json',
     headers: {
         'Authorization': 'Client-ID 699913a195a439d'
     },
@@ -40,5 +42,4 @@ $.ajax({
    }
    
    
-    }
-});
+    });
