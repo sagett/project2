@@ -33,13 +33,19 @@ $.ajax({
 	    	var URL = currentImg.link;
 	    	imageArray.push(URL); 
 	    	console.log(URL);
-	    	
-	    	
-	    	
-	    	
+
+	displayImg(imageArray);
+
+
     	}
     	   
    }
    
    
-    });
+ });
+
+
+function displayImg(URL){
+	var html = 
+}
+
