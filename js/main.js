@@ -34,10 +34,18 @@ $.ajax({
 	    	imageArray.push(URL); 
 	    	console.log(URL);
 
-	displayImg(imageArray);
+function displayImg(URL){
+	var html = '<img src=" '+ URL + ' " alt = "current img" >'
+	$("#imgur").before(html);
+	}
+		displayImg(URL);
 
 
-    	}
+}
+
+
+
+    	
     	   
    }
    
@@ -45,7 +53,6 @@ $.ajax({
  });
 
 
-function displayImg(URL){
-	var html = 
-}
+$('.container').jscroll();
+	
 
