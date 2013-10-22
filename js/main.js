@@ -27,23 +27,23 @@ $.ajax({
     success: function(data) { 
     	console.log(data);
     	console.log(data.data[0].link);
-    	
-    	for (var i=0; i< data.data.length; i++){
+    		for (var i=0; i< data.data.length; i++){
+	    if (data.data[i].animated == true) {
 	    	var currentImg = data.data[i];
 	    	var URL = currentImg.link;
 	    	imageArray.push(URL); 
 	    	console.log(URL);
 
+}
 function displayImg(URL){
 	var html = '<img src=" '+ URL + ' " alt = "current img" >'
-	$("#imgur").before(html);
+	$(".imgur").before(html);
 	}
 		displayImg(URL);
 
 
+
 }
-
-
 
     	
     	   
@@ -53,6 +53,9 @@ function displayImg(URL){
  });
 
 
-$('.container').jscroll();
+$('.container').jscroll({
+
+
+});
 	
 
